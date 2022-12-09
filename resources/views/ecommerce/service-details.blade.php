@@ -37,7 +37,19 @@
 </style>
 <main class="main about">
     <div class="page-header page-header-bg text-left">
-        
+        <div class="col-md-12 center" style="margin-top: 20px;">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Quick Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </main>
 @endsection

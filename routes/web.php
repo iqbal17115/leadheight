@@ -173,9 +173,8 @@ Route::get('app-development', [HomeController::class, 'AppDevelopment'])->name('
 Route::get('graphics-design', [HomeController::class, 'GraphicsDesign'])->name('graphics-design');
 Route::get('software-development', [HomeController::class, 'ReturnPolicy'])->name('software-development');
 Route::get('return-policy', [HomeController::class, 'ReturnPolicy'])->name('return-policy');
-Route::get('return-policy', [HomeController::class, 'ReturnPolicy'])->name('return-policy');
-Route::get('return-policy', [HomeController::class, 'ReturnPolicy'])->name('return-policy');
-Route::get('return-policy', [HomeController::class, 'ReturnPolicy'])->name('return-policy');
+Route::get('service-details', [HomeController::class, 'servicedetail'])->name('service-details');
+
 Route::get('category', FrontEndCategory::class)->name('category');
 Route::get('sign-in', SignIn::class)->name('sign-in');
 Route::get('sign-up', SignUp::class)->name('sign-up');

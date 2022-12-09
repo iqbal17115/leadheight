@@ -78,6 +78,14 @@ class HomeController extends Controller
         return view('ecommerce.about');
     }
 
+    public function servicedetail()
+    {
+     return view('ecommerce.service-details');
+    }
+
+
+
+
     public function PayNow()
     {
          $PayNow = PayNow::where('is_qr_image', "1")->get();
@@ -581,7 +589,7 @@ class HomeController extends Controller
             $Query->message = $request->message;
             $Query->save();
         });
-        
+
         return redirect()->back()->with('success', 'Message has been sent Successfully');
     }
 
