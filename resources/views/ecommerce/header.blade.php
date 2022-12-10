@@ -14,17 +14,14 @@
     <div class="header-top hidden-compact">
         <div class="container">
             <div class="row">
-                <div class="header-top-left col-lg-7 col-md-8 col-sm-6 col-xs-4">
-                    {{-- <div class="hidden-md hidden-sm hidden-xs welcome-msg">Welcome to SuperMarket! Wrap new offers
-                        / gift every single day on Weekends - New Coupon code: <span>Happy2018</span> </div>
-                    <ul class="top-link list-inline hidden-lg ">
-                    </ul> --}}
+                <div class="header-top-left col-md-12">
+                 
                     <ul class="top-link list-inline lang-curr">
                         <li class="currency">
                             <div class="btn-group currencies-block">
                                 <form action="" method="post" enctype="multipart/form-data" id="currency">
                                     <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span> Call Us:
+                                        <span class="icon icon-credit "></span> 
                                         @if (isset($companyInfo->mobile))
                                         {{ $companyInfo->mobile }}
                                         @endif
@@ -40,7 +37,7 @@
                             <div class="btn-group currencies-block">
                                 <form action="" method="post" enctype="multipart/form-data" id="currency">
                                     <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span> Contact:
+                                        <span class="icon icon-credit "></span> 
                                         @if (isset($companyInfo->email))
                                         {{ $companyInfo->email }}
                                         @endif
@@ -50,63 +47,10 @@
                                 </form>
                             </div>
                         </li>
-                        <li class="language">
-                            <div class="btn-group languages-block ">
-                                <form action="" method="post" enctype="multipart/form-data" id="bt-language">
-                                    <a class="btn btn-link dropdown-toggle fa fa-facebook-f" style="font-size:17px"
-                                        data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span>
-                                    </a>
-                                    <a class="btn btn-link dropdown-toggle fa fa-twitter"
-                                        style="font-size:17px; margin-left: 3px;" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span>
-                                    </a>
-
-                                    <a class="btn btn-link dropdown-toggle fa fa-youtube-play"
-                                        style="font-size:17px; margin-left: 3px; " data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span>
-                                    </a>
-
-                                    <a class="btn btn-link dropdown-toggle fa fa-instagram"
-                                        style="font-size:17px; margin-left: 3px;" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span>
-                                    </a>
-
-                                    <ul class="">
-
-                                    </ul>
-                                </form>
-                            </div>
-                        </li>
+                        
                     </ul>
                 </div>
-                <div class="header-top-right collapsed-block col-lg-5 col-md-4 col-sm-6 col-xs-8">
-                    <ul class="top-link list-inline lang-curr">
-                        <li class="currency">
-                            <div class="btn-group currencies-block">
-                                <form action="" method="post" enctype="multipart/form-data" id="currency">
-                                    <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span>Carrer
-                                    </a>
-                                    <ul class="btn-xs">
-                                    </ul>
-                                </form>
-                            </div>
-                        </li>
-                        <li class="language">
-                            <div class="btn-group languages-block ">
-                                <form action="" method="post" enctype="multipart/form-data" id="bt-language">
-                                    <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        <span class="">Conatct Us</span>
-                                    </a>
-                                    <ul class="">
-                                    </ul>
-                                </form>
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
+              
             </div>
         </div>
     </div>
