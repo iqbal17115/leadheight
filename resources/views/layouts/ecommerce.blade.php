@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>
-    @if ($companyInfo)
+        @if ($companyInfo)
         {{ $companyInfo->name }}
-    @endif
+        @endif
     </title>
 
     <meta name="keywords" content="HTML5 Template" />
@@ -18,24 +18,28 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('porto/assets/images/icons/favicon.png') }}">
+    {{-- fontawesome live link --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-        <!-- New  -->
-        <meta charset="utf-8">
-    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
-    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
+    <!-- New  -->
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+    <meta name="description"
+        content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
     <meta name="author" content="Magentech">
     <meta name="robots" content="index, follow" />
-   
+
     <!-- Mobile specific metas
     ============================================ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- Favicon
     ============================================ -->
-    <link rel="shortcut icon" type="image/png" href="ico/favicon-16x16.png"/>
-  
-   
+    <link rel="shortcut icon" type="image/png" href="ico/favicon-16x16.png" />
+
+
     <!-- Libs CSS
     ============================================ -->
     <link rel="stylesheet" href="{{ URL::asset('supermarket/') }}/css/bootstrap/css/bootstrap.min.css">
@@ -45,7 +49,7 @@
     <link href="{{ URL::asset('supermarket/') }}/css/themecss/lib.css" rel="stylesheet">
     <link href="{{ URL::asset('supermarket/') }}/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
     <link href="{{ URL::asset('supermarket/') }}/js/minicolors/miniColors.css" rel="stylesheet">
-    
+
     <!-- Theme CSS
     ============================================ -->
     <link href="{{ URL::asset('supermarket/') }}/css/themecss/so_searchpro.css" rel="stylesheet">
@@ -57,40 +61,68 @@
 
     <link href="{{ URL::asset('supermarket/') }}/css/footer/footer1.css" rel="stylesheet">
     <link href="{{ URL::asset('supermarket/') }}/css/header/header1.css" rel="stylesheet">
-    <link id="color_scheme" href="{{ URL::asset('supermarket/') }}/css/theme.css" rel="stylesheet"> 
+    <link id="color_scheme" href="{{ URL::asset('supermarket/') }}/css/theme.css" rel="stylesheet">
     <link href="{{ URL::asset('supermarket/') }}/css/responsive.css" rel="stylesheet">
 
-     <!-- Google web fonts
+    <!-- Google web fonts
     ============================================ -->
-    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>     
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
     <style type="text/css">
-         body{font-family:'Poppins', sans-serif;}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
-    
-<style>
-.top-left {
-  background-color: rgb(235, 43, 43);
-  color: white;
-  padding-left: 6px;
-}
-@media only screen and (min-width: 768px) {
-    .categories{
-        margin-left: 80px;
-    }
-}
-.heading-title {
-   
- }
- .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+    <style>
+        .top-left {
+            background-color: rgb(235, 43, 43);
+            color: white;
+            padding-left: 6px;
+        }
 
-</style>
+        @media only screen and (min-width: 768px) {
+            .categories {
+                margin-left: 80px;
+            }
+        }
+
+        .heading-title {}
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        @media only screen and (min-width: 768px) {
+            .slider-image {
+                height: 340px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #paymentCard {
+                height: 100px;
+            }
+
+            .cartModal1,
+            #orderFinish,
+            #orderFinishCheckoutMobile {
+                display: none;
+            }
+
+            #whatsapp-link {
+                position: fixed;
+                bottom: 59px;
+                right: 5px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -109,37 +141,48 @@
 
     </div>
 
+
     <!-- Start Mobile Responseive Footer -->
     @include('ecommerce.footer')
     <!-- Start Mobile Responseive Footer -->
-    
-<!-- Include Libs & Plugins
+
+    <div id="whatsapp-link">
+        <a href="https://api.whatsapp.com/send/?phone=8801783599851&text&app_absent=0">
+            <i class='fa fa-whatsapp' style="font-size:48px;color:rgb(0, 255, 85)"; color: rgb(37, 211, 102);'></i>
+        </a>
+    </div>
+
+
+    <!-- Include Libs & Plugins
 ============================================ -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/jquery-2.2.4.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/owl-carousel/owl.carousel.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/slick-slider/slick.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/libs.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/unveil/jquery.unveil.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/countdown/jquery.countdown.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/datetimepicker/moment.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/jquery-ui/jquery-ui.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/modernizr/modernizr-2.6.2.min.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/minicolors/jquery.miniColors.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/slick-slider/slick.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/libs.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/unveil/jquery.unveil.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript"
+        src="{{ URL::asset('supermarket/') }}/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/datetimepicker/moment.js"></script>
+    <script type="text/javascript"
+        src="{{ URL::asset('supermarket/') }}/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/modernizr/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/minicolors/jquery.miniColors.min.js">
+    </script>
 
-<!-- Theme files
+    <!-- Theme files
 ============================================ -->
 
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/application.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/application.js"></script>
 
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/homepage.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/homepage.js"></script>
 
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/toppanel.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/so_megamenu.js"></script>
-<script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/addtocart.js"></script>  
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/toppanel.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/so_megamenu.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('supermarket/') }}/js/themejs/addtocart.js"></script>
     <script>
         $.ajaxSetup({
             crossDomain: true,

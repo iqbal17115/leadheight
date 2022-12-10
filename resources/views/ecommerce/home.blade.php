@@ -130,9 +130,7 @@
     </style>
     <div id="content">
         <div class="content-top-w">
-
             <div class="row">
-
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col2">
                     <div class="module sohomepage-slider ">
                         <div class="yt-content-slider" data-rtl="yes" data-autoplay="yes" data-autoheight="no"
@@ -147,7 +145,6 @@
                             </div>
                             @endforeach
                         </div>
-
                     </div>
                 </div>
             </div>
