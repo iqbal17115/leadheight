@@ -157,7 +157,7 @@
     <div class="page-header page-header-bg text-left">
         <div class="col-md-12 center" style="background-color: #221A69">
             <div class="col-md-6 ml-6">
-                <img src="{{ URL::asset('images/Experience.jpg')}}"
+                <img src="{{ asset('Experience.jpg')}}"
                     alt="..." class="img-thumbnail">
             </div>
             <div class="col-md-6">
