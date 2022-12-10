@@ -156,7 +156,7 @@
         </div>
         <div class="row content-main-w">
 
-            <div class="col-lg-12 col-md-12 col-sm-8 col-xs-12 main-right">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                 <!-- Deals -->
                 <div class="module deals-layout1">
@@ -174,7 +174,7 @@
                                 </div>
                             </div>
 
-                            <a class="viewall" href="indexf110.html?route=product/special">View All</a>
+                            <a class="viewall" href="javascript::void();">View All</a>
 
                         </div>
                     </div>
