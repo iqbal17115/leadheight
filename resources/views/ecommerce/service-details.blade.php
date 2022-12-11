@@ -142,6 +142,103 @@
             background-attachment: initial !important;
         }
     }
+
+
+    // Tables
+    .card {
+        border: 0;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, .08);
+        box-shadow: 0 3px 0px 0 rgba(0, 0, 0, .08);
+        transition: all .3s ease-in-out;
+        padding: 2.25rem 0;
+        position: relative;
+        will-change: transform;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 5px;
+            background-color: $primary-color;
+            transition: 0.5s;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
+            box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
+
+            &:after {
+                width: 100%;
+            }
+
+        }
+
+        & .card-header {
+            background-color: white;
+            padding-left: 2rem;
+            border-bottom: 0px;
+        }
+
+        & .card-title {
+            margin-bottom: 1rem;
+        }
+
+        & .card-block {
+            padding-top: 0;
+        }
+
+        & .list-group-item {
+            border: 0px;
+            padding: .25rem;
+            color: $main-font-color;
+            font-weight: $main-font-weight;
+        }
+    }
+
+    // Price
+    .display-2 {
+        font-size: 7rem;
+        letter-spacing: -.5rem;
+
+        & .currency {
+            font-size: 2.75rem;
+            position: relative;
+            font-weight: $main-font-weight + 100;
+            top: -45px;
+            letter-spacing: 0px;
+        }
+
+        & .period {
+            font-size: 1rem;
+            color: lighten($main-font-color, 20%);
+            letter-spacing: 0px;
+        }
+    }
+
+    // Buttons
+    .btn {
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: $main-font-weight + 200;
+        color: lighten($main-font-color, 15%);
+        border-radius: 0;
+        padding: .75rem 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .btn-gradient {
+        background-color: #f2f2f2;
+        transition: background .3s ease-in-out;
+
+        &:hover {
+            color: white;
+            background-color: $primary-color;
+        }
+    }
 </style>
 <main class="main about">
     <div class="page-header page-header-bg text-left">
@@ -169,9 +266,45 @@
                 <p class="text--glitch" data-text="GLITCH TEXT">
                     GLITCH TEXT
                 </p>
-                <p class="text-capitalize text-style" style="margin-top: 25px;">Every month, more than three billion individuals use social media
+                <p class="text-capitalize text-style" style="margin-top: 25px;">Every month, more than three billion
+                    individuals use social media
                     throughout the world, the number of users and engagement on major platforms continues to rise and
                     help you to raise brand awareness.</p>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center" style="margin-top: 48px;">
+            <p class="text-capitalize" style="font-size: 34px; ">
+                 Select Our Flexible Plan
+            </p>
+            <p class="text-capitalize" style="font-size: 22px; line-height: 47px;">Curated to meet the latest business challenge</p>
+        </div>
+
+        <div class="container">
+            <div class="row flex-items-xs-middle flex-items-xs-center">
+                <!-- Table #1  -->
+                <div class="col-xs-12 col-lg-4">
+                    <div class="card text-xs-center">
+                        <div class="card-header text-center" style="height: 50px;">
+                            <h3 class="display-2"><span class="currency">$</span>19<span class="period">/month</span>
+                            </h3>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title text-center">
+                                Basic Plan
+                            </h4>
+                            <ul class="list-group text-center">
+                                <li class="list-group-item">Ultimate Features</li>
+                                <li class="list-group-item">Responsive Ready</li>
+                                <li class="list-group-item">Visual Composer Included</li>
+                                <li class="list-group-item">24/7 Support System</li>
+                            </ul>
+                            <div class="text-center" style="height: 50px;">
+                               <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
