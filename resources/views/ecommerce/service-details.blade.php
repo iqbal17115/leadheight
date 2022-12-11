@@ -275,9 +275,10 @@
 
         <div class="col-md-12 text-center" style="margin-top: 48px;">
             <p class="text-capitalize" style="font-size: 34px; ">
-                 Select Our Flexible Plan
+                Select Our Flexible Plan
             </p>
-            <p class="text-capitalize" style="font-size: 22px; line-height: 47px;">Curated to meet the latest business challenge</p>
+            <p class="text-capitalize" style="font-size: 22px; line-height: 47px;">Curated to meet the latest business
+                challenge</p>
         </div>
 
         <div class="container">
@@ -300,8 +301,31 @@
                                 <li class="list-group-item">24/7 Support System</li>
                             </ul>
                             <div class="text-center" style="height: 50px;">
-                               <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
+                                <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center" style="margin-top: 20px; margin-top: 42px;">
+            <p class="text-capitalize" style="font-size: 34px; ">
+                Our Stunning Portfolios
+            </p>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-md-6" style="margin-top: 44px;">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="https://images.pexels.com/photos/573130/pexels-photo-573130.jpeg?cs=srgb&dl=pexels-zulian-yuliansyah-573130.jpg&fm=jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 24px; margin-left: 18px;">Card title</h5>
+                            <p class="card-text" style="font-size: 18px; margin-left: 15px;">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                                <div class="text-center" style="padding-bottom: 11px; padding-top: 9px;">
+                                    <a class="btn btn-primary" href="#" role="button">Go to Our site</a>
+                                </div>
                         </div>
                     </div>
                 </div>
