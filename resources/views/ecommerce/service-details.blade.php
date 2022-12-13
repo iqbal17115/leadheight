@@ -143,7 +143,6 @@
         }
     }
 
-
     // Tables
     .card {
         border: 0;
@@ -257,20 +256,19 @@
         </div>
 
         <div class="col-md-12">
-            <div class="col-md-5" style="margin-top: 19px;">
-                <img src="https://www.pngmart.com/files/15/Apple-iPhone-11-PNG-Image.png" class="img-fluid"
-                    alt="Responsive image">
-            </div>
-            <div class="col-md-7" style="margin-top: 78px;">
-                <p class="text-capitalize">Design a better future</p>
-                <p class="text--glitch" data-text="GLITCH TEXT">
-                    GLITCH TEXT
-                </p>
-                <p class="text-capitalize text-style" style="margin-top: 25px;">Every month, more than three billion
-                    individuals use social media
-                    throughout the world, the number of users and engagement on major platforms continues to rise and
-                    help you to raise brand awareness.</p>
-            </div>
+            @if ($services)
+                <div class="col-md-5" style="margin-top: 19px;">
+                    <img src="{{ url('storage/photo/'.$services[0]->image1) }}" class="img-fluid"
+                        alt="Responsive image">
+                </div>
+                <div class="col-md-7" style="margin-top: 78px;">
+                    <p class="text-capitalize">{{$services[0]->heading}}</p>
+                    <p class="text--glitch" data-text="GLITCH TEXT">
+                        {{$services[0]->title}}
+                    </p>
+                    <p class="text-capitalize text-style" style="margin-top: 25px;">{!!$services[0]->description!!}</p>
+                </div>
+            @endif
         </div>
 
         <div class="col-md-12 text-center" style="margin-top: 48px;">
@@ -285,26 +283,30 @@
             <div class="row flex-items-xs-middle flex-items-xs-center">
                 <!-- Table #1  -->
                 <div class="col-xs-12 col-lg-4">
-                    <div class="card text-xs-center">
-                        <div class="card-header text-center" style="height: 50px;">
-                            <h3 class="display-2"><span class="currency">$</span>19<span class="period">/month</span>
-                            </h3>
-                        </div>
-                        <div class="card-block">
-                            <h4 class="card-title text-center">
-                                Basic Plan
-                            </h4>
-                            <ul class="list-group text-center">
-                                <li class="list-group-item">Ultimate Features</li>
-                                <li class="list-group-item">Responsive Ready</li>
-                                <li class="list-group-item">Visual Composer Included</li>
-                                <li class="list-group-item">24/7 Support System</li>
-                            </ul>
-                            <div class="text-center" style="height: 50px;">
-                                <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
+                    @foreach ($services as $service)
+                        @foreach ($service->Package as $singlepackage)
+                            <div class="card text-xs-center">
+                                <div class="card-header text-center" style="height: 50px;">
+                                    <h3 class="display-2"><span class="currency">$</span>{{$singlepackage->price}}<span class="period">/month</span>
+                                    </h3>
+                                </div>
+                                <div class="card-block">
+                                    <h4 class="card-title text-center">
+                                        {{$singlepackage->name}}
+                                    </h4>
+                                    <ul class="list-group text-center">
+                                        <li class="list-group-item">{!!$singlepackage->description!!}</li>
+                                        {{-- <li class="list-group-item">Responsive Ready</li>
+                                        <li class="list-group-item">Visual Composer Included</li>
+                                        <li class="list-group-item">24/7 Support System</li> --}}
+                                    </ul>
+                                    <div class="text-center" style="height: 50px;">
+                                        <a href="#" class="btn btn-gradient mt-2">Choose Plan</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        @endforeach
+                @endforeach
                 </div>
             </div>
         </div>
@@ -316,19 +318,23 @@
         </div>
         <div class="row">
             <div class="container">
-                <div class="col-md-6" style="margin-top: 44px;">
-                    <div class="card mb-3">
-                        <img class="card-img-top" src="https://images.pexels.com/photos/573130/pexels-photo-573130.jpeg?cs=srgb&dl=pexels-zulian-yuliansyah-573130.jpg&fm=jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title" style="font-size: 24px; margin-left: 18px;">Card title</h5>
-                            <p class="card-text" style="font-size: 18px; margin-left: 15px;">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                                <div class="text-center" style="padding-bottom: 11px; padding-top: 9px;">
-                                    <a class="btn btn-primary" href="#" role="button">Go to Our site</a>
+                @foreach ($services as $service)
+                   @foreach ($service->Portfolio as $singlePortfolio)
+                        <div class="col-md-6" style="margin-top: 44px;">
+                            <div class="card mb-3">
+                                <img class="card-img-top" src="{{ url('storage/photo/'.$singlePortfolio->image) }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size: 24px; margin-left: 18px;">{{$singlePortfolio->name}}</h5>
+                                    <p class="card-text" style="font-size: 18px; margin-left: 15px;">This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.</p>
+                                        <div class="text-center" style="padding-bottom: 11px; padding-top: 9px;">
+                                            <a class="btn btn-primary" href="#" role="button">{{$singlePortfolio->link}}</a>
+                                        </div>
                                 </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endforeach
             </div>
         </div>
     </div>

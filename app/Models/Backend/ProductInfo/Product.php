@@ -5,6 +5,8 @@ namespace App\Models\Backend\ProductInfo;
 use App\Models\Backend\Inventory\PurchaseInvoiceDetail;
 use App\Models\Backend\Inventory\SaleInvoiceDetail;
 use App\Models\Backend\Inventory\StockManager;
+use App\Models\Backend\ProductInfo\Package;
+use App\Models\Backend\ProductInfo\Portfolio;
 use App\Models\Backend\Setting\Vat;
 use App\Models\FrontEnd\OrderDetail;
 use App\Models\FrontEnd\AddToCard;
@@ -57,7 +59,17 @@ class Product extends Model
 
     public function Branch()
     {
-        return $this->belongsTo(Branch::class);
+        return $this->belongsTo(package::class);
+    }
+
+    public function Package()
+    {
+        return $this->hasMany(Package::class);
+    }
+
+    public function Portfolio()
+    {
+        return $this->hasMany(Portfolio::class);
     }
 
     public function SubCategory()

@@ -15,13 +15,13 @@
         <div class="container">
             <div class="row">
                 <div class="header-top-left col-md-12">
-                 
+
                     <ul class="top-link list-inline lang-curr">
                         <li class="currency">
                             <div class="btn-group currencies-block">
                                 <form action="" method="post" enctype="multipart/form-data" id="currency">
                                     <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span> 
+                                        <span class="icon icon-credit "></span>
                                         @if (isset($companyInfo->mobile))
                                         {{ $companyInfo->mobile }}
                                         @endif
@@ -37,7 +37,7 @@
                             <div class="btn-group currencies-block">
                                 <form action="" method="post" enctype="multipart/form-data" id="currency">
                                     <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                        <span class="icon icon-credit "></span> 
+                                        <span class="icon icon-credit "></span>
                                         @if (isset($companyInfo->email))
                                         {{ $companyInfo->email }}
                                         @endif
@@ -47,10 +47,10 @@
                                 </form>
                             </div>
                         </li>
-                        
+
                     </ul>
                 </div>
-              
+
             </div>
         </div>
     </div>
@@ -284,23 +284,22 @@
                                                         <div class="content">
                                                             <div class="row">
                                                                 @foreach($categories as $category)
-                                                                <div class="col-md-3">
-                                                                    <div class="column">
-                                                                        <a href="#" class="title-submenu"
-                                                                            style="color: #301A63; font-family: Roboto, Sans-serif;font-size: 19px;font-weight: 900; 0.4px;margin-bottom: 10px;">{{
-                                                                            $category->name }}</a>
-                                                                        <div>
-                                                                            <ul class="row-list">
-                                                                                @foreach ($category->SubCategory as
-                                                                                $subCategory)
-                                                                                <li><a href="category.html">{{
-                                                                                        $subCategory->name }}</a></li>
-                                                                                @endforeach
-                                                                            </ul>
-
+                                                                    <div class="col-md-3">
+                                                                        <div class="column">
+                                                                            <a href="#" class="title-submenu"
+                                                                                style="color: #301A63; font-family: Roboto, Sans-serif;font-size: 19px;font-weight: 900; 0.4px;margin-bottom: 10px;">{{
+                                                                                $category->name }}</a>
+                                                                            <div>
+                                                                                <ul class="row-list">
+                                                                                    @foreach ($category->SubCategory as
+                                                                                    $subCategory)
+                                                                                    <li><a href="{{ route('service-details', ['id' => $subCategory['id']]) }}">{{
+                                                                                            $subCategory->name }}</a></li>
+                                                                                    @endforeach
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
                                                                 @endforeach
                                                             </div>
                                                         </div>

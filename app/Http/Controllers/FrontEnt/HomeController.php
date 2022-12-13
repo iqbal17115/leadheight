@@ -13,6 +13,7 @@ use App\Models\Backend\ProductInfo\Category;
 use App\Models\Backend\ProductInfo\SubCategory;
 use App\Models\Backend\ProductInfo\SubSubCategory;
 use App\Models\Backend\ProductInfo\Product;
+use App\Models\Backend\ProductInfo\Package;
 use App\Models\Backend\Setting\ShippingCharge;
 use App\Models\Backend\Setting\HowWeWillHelp;
 use App\Models\Backend\Setting\WhoTrust;
@@ -78,9 +79,16 @@ class HomeController extends Controller
         return view('ecommerce.about');
     }
 
-    public function servicedetail()
+    public function servicedetail($id = null)
     {
-     return view('ecommerce.service-details');
+     $services = Product::whereSubCategoryId($id)->get();
+    //  $packages = Package::whereProductId($id)->get();
+
+
+    //  dd($services);
+     return view('ecommerce.service-details',[
+        'services' => $services,
+     ]);
     }
 
 
