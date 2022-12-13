@@ -311,7 +311,7 @@
             </div>
         </div>
 
-        <div class="col-md-12 text-center" style="margin-top: 20px; margin-top: 42px;">
+        <div class="col-md-12 text-center" style="margin-top: 20px;">
             <p class="text-capitalize" style="font-size: 34px; ">
                 Our Stunning Portfolios
             </p>
