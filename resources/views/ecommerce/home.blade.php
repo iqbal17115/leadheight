@@ -127,6 +127,133 @@
         .slick-arrow.slick-hidden {
             display: none;
         }
+
+
+        // card design
+        .containersss {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 60px;
+            background: #222;
+        }
+
+        .card-item {
+            position: relative;
+            width: 300px;
+            height: 350px;
+            background: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-item::before {
+            content: '';
+            position: absolute;
+            inset: -10px 50px;
+            border-top: 4px solid var(--color);
+            border-bottom: 4px solid var(--color);
+            transform: skewY(15deg);
+            transition: 0.5s ease-in-out;
+        }
+
+        .card-item:hover::before {
+            inset: -10px 40px;
+            transform: skewY(0deg);
+        }
+
+        .card-item::after {
+            content: '';
+            position: absolute;
+            inset: 60px -10px;
+            border-left: 4px solid var(--color);
+            border-right: 4px solid var(--color);
+            transform: skew(15deg);
+            transition: 0.5s ease-in-out;
+        }
+
+        .card-item:hover::after {
+            inset: 40px -10px;
+            transform: skew(0deg);
+        }
+
+        .card-item .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background: #2e2e2e;
+            gap: 20px;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .card-item .content .icon {
+            color: var(--color);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            background: #2e2e2e;
+            box-shadow: 0 0 0 4px #2e2e2e,
+                0 0 0 6px var(--color);
+            transition: 0.5s ease-in-out;
+        }
+
+        .card-item:hover .content .icon {
+            background: var(--color);
+            color: #2e2e2e;
+            box-shadow: 0 0 0 4px #2e2e2e,
+                0 0 0 300px var(--color);
+        }
+
+        .card-item .content .text h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: 0.5s ease-in-out;
+        }
+
+        .card-item:hover .content .text h3 {
+            color: #2e2e2e;
+        }
+
+        .card-item .content .text p {
+            color: #999;
+            transition: 0.5s ease-in-out;
+        }
+
+        .card-item:hover .content .text p {
+            color: #2e2e2e;
+        }
+
+        .card-item .content .text a {
+            position: relative;
+            display: inline-block;
+            background: var(--color);
+            color: #2e2e2e;
+            text-decoration: none;
+            font-weight: 500;
+            margin-block-start: 10px;
+            padding: 8px 15px;
+        }
+
+        .card-item:hover .content .text a {
+            background: #2e2e2e;
+            color: var(--color);
+        }
     </style>
     <div id="content">
         <div class="content-top-w">
@@ -252,53 +379,110 @@
 
 
 
-                    <div class="col-md-12 text-center" style="margin-top: 20px;">
-                        <p class="text-capitalize" style="font-size: 34px; ">
-                            Maximum Growth Plan
-                        </p>
-                    </div>
+                {{-- <div class="col-md-12 text-center" style="margin-top: 20px;">
+                    <p class="text-capitalize" style="font-size: 34px; ">
+                        Maximum Growth Plan
+                    </p>
+                </div>
 
-                    <div class="col-md-12">
-                        <div class="col-md-1"></div>
-                            <div class="col-md-10 ml-2">
-                                <div class="col-md-3">
-                                    <div class="card" style="width:18rem;">
-                                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLN0_NvJuLGMVD_HxY2bQ4XgZEiQ4PeH38w715AYBPg&s" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up
-                                                the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="card" style="width:18rem;">
-                                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLN0_NvJuLGMVD_HxY2bQ4XgZEiQ4PeH38w715AYBPg&s" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up
-                                                the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="card" style="width:18rem;">
-                                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLN0_NvJuLGMVD_HxY2bQ4XgZEiQ4PeH38w715AYBPg&s" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up
-                                                the bulk of the card's content.</p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
+                <div class="col-md-12">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 ml-2">
+                        <div class="col-md-3">
+                            <div class="card" style="width:18rem;">
+                                <img class="card-img-top"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLN0_NvJuLGMVD_HxY2bQ4XgZEiQ4PeH38w715AYBPg&s"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
-                        <div class="col-md-1"></div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card" style="width:18rem;">
+                                <img class="card-img-top"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLN0_NvJuLGMVD_HxY2bQ4XgZEiQ4PeH38w715AYBPg&s"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card" style="width:18rem;">
+                                <img class="card-img-top"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLN0_NvJuLGMVD_HxY2bQ4XgZEiQ4PeH38w715AYBPg&s"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-md-1"></div>
+                </div> --}}
+
+                <div class="containersss" style="  position: relative;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 60px;">
+                @foreach ($HomePageServices as $HomePageService)
+                        <div class="card-item" style="--color: #89ec5b">
+                            <div class="content">
+                                <div class="icon">
+                                    <ion-icon name="brush-outline"></ion-icon>
+                                    <img src="{{ asset('storage/photo/' . $HomePageService->image2) }}"
+                                        alt="Add alternate text here">
+
+                                </div>
+                                <div class="text">
+                                    <h3>{{$HomePageService->name}}</h3>
+                                    <p>{{$HomePageService->title}}</p>
+                                    <a href="{{ route('service-details', ['id' => $HomePageService['id']]) }}">View Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                @endforeach
+                    {{-- <div class="card-item" style="--color: #eb5ae5">
+                        <div class="content">
+                            <div class="icon">
+                                <ion-icon name="code-slash-outline"></ion-icon>
+                            </div>
+                            <div class="text">
+                                <h3>Development</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, aperiam!</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item" style="--color: #5b98eb">
+                        <div class="content">
+                            <div class="icon">
+                                <ion-icon name="construct-outline"></ion-icon>
+                            </div>
+                            <div class="text">
+                                <h3>Maintenance</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, itaque!</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                    </div> --}}
+                </div>
 
 
 

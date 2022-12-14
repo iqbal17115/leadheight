@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Backend\Inventory\SaleInvoice;
 use App\Models\Backend\Inventory\SaleInvoiceDetail;
 use App\Models\Backend\ProductInfo\Category;
+use App\Models\Backend\ProductInfo\Product;
 use App\Models\Backend\Setting\BreakingNews;
 use App\Models\Backend\Setting\CompanyInfo;
 use App\Models\Backend\Setting\AboutUs;
@@ -42,6 +43,8 @@ class AppServiceProvider extends ServiceProvider
         //Categories
         View::composer('*', function ($view) {
 
+            // dd(Product::whereIsActive(1)->get());
+
             $view->with('language', Language::whereIsDefault(1)->first());
             $view->with('Districts', District::orderBy('name', 'asc')->get());
             $view->with('categories', Category::orderBy('id', 'desc')->get());
@@ -52,6 +55,8 @@ class AppServiceProvider extends ServiceProvider
             $view->with('companyInfo', CompanyInfo::first());
             $view->with('AboutUsInfo', AboutUs::first());
             $view->with('InvoiceSetting', InvoiceSetting::first());
+            $view->with('HomePageServices', Product::whereIsActive(1)->get());
+            // $services = Product::whereSubCategoryId($id)->whereIsActive(1)->get();
             $view->with('currencySymbol', Currency::whereIsActive(1)->first());
             $view->with('cardBadge', AddToCardService::cardTotalProductAndAmount());
             $view->with('BreakingNews', BreakingNews::whereIsActive(1)->get());

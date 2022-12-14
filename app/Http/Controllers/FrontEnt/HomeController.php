@@ -83,10 +83,19 @@ class HomeController extends Controller
     {
      $services = Product::whereSubCategoryId($id)->get();
     //  $packages = Package::whereProductId($id)->get();
-
-
     //  dd($services);
      return view('ecommerce.service-details',[
+        'services' => $services,
+     ]);
+    }
+
+
+    public function homepageservice($id = null)
+    {
+     $services = Product::whereSubCategoryId($id)->get();
+    //  $packages = Package::whereProductId($id)->get();
+    //  dd($services);
+     return view('ecommerce.home',[
         'services' => $services,
      ]);
     }
